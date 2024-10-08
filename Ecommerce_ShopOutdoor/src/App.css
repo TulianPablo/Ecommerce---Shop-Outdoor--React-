@@ -1,0 +1,14 @@
+.app-container {
+    background-color:#d1f2eb ; /* Fondo claro */
+    min-height: 100vh; /* Altura mínima para cubrir la pantalla */
+    padding: 20px; /* Opcional: Espaciado alrededor */
+  }
+  
+  /* Asegura que no haya margenes en el body */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Fuente para toda la app */
+  }
+  
