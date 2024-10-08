@@ -1,3 +1,4 @@
+//Definición del componente App.jsx.
 
 import './App.css'
 import NavBar from './components/navBar/NavBar'
