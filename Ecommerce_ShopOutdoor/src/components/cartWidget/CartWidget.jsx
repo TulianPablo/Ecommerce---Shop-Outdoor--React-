@@ -1,4 +1,4 @@
-//import imgCarrito from "../src/assets/imagenes/img-carrito.png"
+//Definición del componente CardWidget
 import imgCarrito from "../../assets/imagenes/img-carrito.png";
 
 

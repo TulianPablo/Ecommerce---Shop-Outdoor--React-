@@ -1,3 +1,5 @@
+//Definición del componente NavBar
+
 import CartWidget from "../cartWidget/CartWidget";
 import "./navbar.css"
 
@@ -7,7 +9,6 @@ const NavBar = () => {
       <div className="brand">
         <h2>SHOP OUTDOOR</h2>
       </div>
-
       <ul className="nav-links">
         <li>Inicio</li>
         <li>Indumentaria</li>
