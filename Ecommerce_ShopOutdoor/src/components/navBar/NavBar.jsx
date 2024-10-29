@@ -35,9 +35,7 @@ const NavBar = () => {
         <li className="category">
           <Link to="/category/Mochilas y Bolsos">Mochilas y Bolsos </Link>
         </li>
-        <li className="category">
-          <Link to="/category/Contacto">Contacto</Link>
-        </li>
+        
       </ul>
 
      

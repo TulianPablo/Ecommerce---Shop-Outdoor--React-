@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { getProducts } from "../data/data.js"
 
+//Retorna todos los productos
 const useProducts = () => {
 
     const [products, setProducts] = useState([])
@@ -22,12 +23,11 @@ const useProducts = () => {
 
 }
 export {useProducts}
-//export default useProducts
 
+//Retorna los productos filtrados por categoria
 const useProductsFilter = ({idCategory}) =>{
 
   const [products, setProducts] = useState([])
-  //const { idCategory } = useParams()
 
   useEffect(() => {
     getProducts()
