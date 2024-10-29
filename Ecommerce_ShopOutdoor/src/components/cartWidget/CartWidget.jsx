@@ -1,5 +1,6 @@
 //Definición del componente CardWidget
-import imgCarrito from "../../assets/imagenes/img-carrito.png";
+//import imgCarrito from "../../assets/imagenes/img-carrito.png";
+import imgCarrito from "/img/shopping-cart.png";
 
 
 import "./cartWidget.css" 

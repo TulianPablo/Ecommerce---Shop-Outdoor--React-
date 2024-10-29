@@ -1,0 +1,108 @@
+/* Contenedor principal para el detalle del producto */
+.item-detail {
+  display: flex;
+  flex-wrap: wrap;            
+  justify-content: center;
+  align-items: flex-start;    
+  width: 100%;
+  min-height: 90vh;
+  padding: 50px 20px;        
+  gap: 20px;                  
+  background-color:rgb(110, 107, 77);  
+}
+
+/* Contenedor para las imágenes */
+.images-detail-container {
+  display: flex;
+  width: 50%;
+  gap: 20px;                  
+}
+
+/* Imágenes secundarias */
+.images-detail-container .secondary-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;                 
+  gap: 10px;                 
+}
+
+.images-detail-container .secondary-images img {
+  width: 100px;               
+  height: 100px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;           
+  object-fit: cover;          
+  transition: transform 0.2s ease-in-out; 
+}
+
+.images-detail-container .secondary-images img:hover {
+  transform: scale(1.1);      
+}
+
+/* Imagen principal */
+.images-detail-container .main-image {
+  width: 70%;                 
+}
+
+.images-detail-container .main-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;          
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+/* Contenedor para el texto */
+.text-detail-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 20px;
+  gap: 20px;                  
+  background-color: rgb(110, 107, 77);    /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* Título del producto */
+.title-detail {
+  padding: 10px 0;
+  font-size: 2.5rem;          
+  font-weight: bold;
+  color: #333;
+}
+
+/* Descripción del producto */
+.text-detail {
+  font-style: italic;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  color: white;
+  line-height: 1.6;          
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .item-detail {
+      flex-direction: column; 
+      padding: 20px;
+  }
+
+  .images-detail-container {
+      width: 100%;            /* Tomar todo el ancho disponible */
+  }
+
+  .text-detail-container {
+      width: 100%;
+  }
+
+  .title-detail {
+      font-size: 2rem;
+  }
+
+  .text-detail {
+      font-size: 1.1rem;
+  }
+}

@@ -1,5 +1,5 @@
 .app-container {
-    background-color:#d1f2eb ; /* Fondo claro */
+    background-color:rgb(110, 107, 77);/* Fondo claro */
     min-height: 100vh; /* Altura mínima para cubrir la pantalla */
     padding: 20px; /* Opcional: Espaciado alrededor */
   }

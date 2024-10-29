@@ -4,7 +4,7 @@
     justify-content: space-between; /* Espacio entre los elementos */
     align-items: center; /* Alinear los elementos verticalmente */
     padding: 10px 20px;
-    background-color:#148f77;/* Fondo oscuro */
+    background-color:burlywood;/* Fondo oscuro */
     color: white; /* Texto en blanco */
     margin: 0;
   }
@@ -13,19 +13,46 @@
     margin: 0;
     font-size: 24px;
   }
+
+  /* Contenedor de la marca y el logo */
+.brand {
+  display: flex;
+  align-items: center;   
+  gap: 10px;
+          
+}
+.brand-link {
+  text-decoration: none;  
+  color: inherit;         
+  display: flex;          
+  align-items: center;    
+  gap: 10px;             
+}
+
+.brand img.logo {
+  width: 50px;           
+  height: auto;         
+  object-fit: contain;   
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 24px;
+  color: white;          
+}
   
-  .nav-links {
+  .categories {
     list-style: none; /* Quitar viñetas */
     display: flex;
     gap: 20px; /* Espacio entre los elementos */
   }
   
-  .nav-links li {
+  .categories li {
     cursor: pointer;
     transition: color 0.3s ease; /* Transición suave en el cambio de color */
   }
   
-  .nav-links li:hover {
+  .categories li:hover {
     color: #ddd; /* Cambiar color al pasar el ratón */
   }
   
@@ -40,9 +67,60 @@
       flex-direction: column;
     }
   
-    .nav-links {
+    .categories {
       flex-direction: column;
       gap: 10px;
     }
   }
+
+  .categories .category{
+    list-style: none;
+  }
   
+  /* Estilos para los enlaces de las categorías */
+.categories a {
+  text-decoration: none;      
+  color: white;               
+  font-weight: bold;          
+  padding: 10px 15px;         
+  border-radius: 5px;         
+  background-color: transparent; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.categories a:hover {
+  background-color: rgb(110, 107, 77);     
+  color: #f0f0f0;            
+}
+
+.categories .category {
+  list-style: none;         
+  margin: 0;                 
+  padding: 0;                 
+}
+
+/* Estilo activo para el link de la categoría seleccionada */
+.categories a.active {
+  background-color: #555;    
+  color: #fff;               /
+}
+
+/* Responsividad adicional */
+@media (max-width: 768px) {
+  .categories a {
+      padding: 8px 10px;      
+      font-size: 14px;        
+  }
+}
+
+.logo {
+  position: left;
+  cursor: pointer;
+  color: white; 
+}
+
+
+.logo-img {
+  width: 50px; 
+  height: auto; 
+}

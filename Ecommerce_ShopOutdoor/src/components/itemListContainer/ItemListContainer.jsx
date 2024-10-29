@@ -1,9 +1,20 @@
 //Definición del componente ItemListContainer
+import ItemList from "./ItemList"
+import {useProductsFilter} from "../../hooks/useProducts"
+import { useParams } from "react-router-dom"
+import "./itemListContainer.css"
 
-const ItemListContainer = ({producto}) => {
+
+const ItemListContainer = () => {
+  const { idCategory } = useParams()
+
+
+  const {products} = useProductsFilter({idCategory})
+  
     return (
-      <div>
-          <h1>{producto}</h1>
+      <div className="itemlistcontainer">
+      <ItemList products={products} />
+
       </div>
     )
   }

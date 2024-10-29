@@ -1,25 +1,47 @@
 //Definición del componente NavBar
 
 import CartWidget from "../cartWidget/CartWidget";
-import "./navbar.css"
+import "./navbar.css";
+import {Link } from "react-router-dom";
+import logo from "/img/logo-2.jpg";
 
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <div className="brand">
-        <h2>SHOP OUTDOOR</h2>
-      </div>
-      <ul className="nav-links">
-        <li>Inicio</li>
-        <li>Indumentaria</li>
-        <li>Calzado</li>
-        <li>Camping</li>
-        <li>Escalada</li>
-        <li>Mochilas y Bolsos</li>
-        <li>Contacto</li>
 
-        
+      <Link to ="/" className="brand-link">
+       <div className="brand">
+        <img src={logo} alt="Logo" className="logo" /> 
+        <h2>Shop Mountain Outdoor</h2>
+      </div>
+      </Link>
+
+      <ul className="categories">
+        <li className="category">
+          <Link to="/" >Inicio</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Indumentaria" >Indumentaria</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Calzado">Calzado</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Camping">Camping</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Escalada">Escalada</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Mochilas y Bolsos">Mochilas y Bolsos </Link>
+        </li>
+        <li className="category">
+          <Link to="/category/Contacto">Contacto</Link>
+        </li>
       </ul>
+
+     
+
 
       <CartWidget />
     </nav>
