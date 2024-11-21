@@ -1,0 +1,55 @@
+.item-count-container {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos en columna */
+    align-items: center;    /* Centrar elementos horizontalmente */
+    gap: 10px;              /* Espaciado entre elementos */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+  }
+  
+  .item-count-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .item-count-buttons button {
+    background-color: #6e6b4d; /* Color principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .item-count-buttons button:hover {
+    background-color: #565340; /* Color al pasar el cursor */
+  }
+  
+  .item-count-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .add-to-cart-button {
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #444;
+  }
+  

@@ -1,24 +1,41 @@
+
 .cart-widget {
     position: relative;
     cursor: pointer;
-    color: white; /* Asegurarse de que el icono sea blanco */
+    color: white; 
   }
-
 
 .cart-img {
     width: 40px; /* Ajusta el tamaño del carrito aquí */
     height: auto; /* Mantiene la proporción de la imagen */
   }
   
+
   .cart-quantity {
     position: absolute;
-    top: -8px;
+    top: -10px;
     right: -10px;
     background-color: red;
     color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
+    border-radius: 50%; 
+    padding: 20 10px;
+    font-size: 20px;
     font-weight: bold;
   }
+
+  /*
+  .cartwidget{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }*/
+
+
+
+
+
+
+ 
   
