@@ -1,7 +1,5 @@
-//Definición del componente ItemListContainer
 import { useState, useEffect } from "react"
 import ItemList from "./ItemList"
-//import {useProductsFilter} from "../../hooks/useProducts"
 import { useParams } from "react-router-dom"
 import { getDocs, collection, query, where } from "firebase/firestore"
 import db from "../../db/db.js"
@@ -13,8 +11,6 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([])
   const { idCategory } = useParams()
 
-
-  //const {products} = useProductsFilter({idCategory})
 
   const getProducts = () => {
     const productsRef = collection(db, "products")

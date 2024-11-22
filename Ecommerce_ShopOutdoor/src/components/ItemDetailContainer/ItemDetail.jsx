@@ -12,7 +12,6 @@ const ItemDetail = ({ product }) => {
 
   const addProduct=(count)=>{
     const productCart = {...product, quantity:count}
-   // console.log(productCart)
 
    addProductInCart(productCart)
 

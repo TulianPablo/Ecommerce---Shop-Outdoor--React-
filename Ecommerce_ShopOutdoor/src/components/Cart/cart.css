@@ -175,3 +175,32 @@
     max-width: none;
   }
 }
+/* Contenedor para los botones */
+.cart-buttons {
+  display: flex;           /* Organiza los elementos en fila */
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px;               /* Espaciado entre botones */
+  margin-top: 20px;        /* Separación superior */
+}
+
+/* Ajustes para botones dentro del contenedor */
+.cart-buttons .empty-cart-btn,
+.cart-buttons .button-finalize-purchase {
+  flex: 1;                  /* Ocupa el mismo espacio para cada botón */
+  max-width: 200px;         /* Máximo ancho del botón */
+  text-align: center;       /* Alineación del texto */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .cart-buttons {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    gap: 10px;              /* Menor espacio entre botones */
+  }
+
+  .cart-buttons .empty-cart-btn,
+  .cart-buttons .button-finalize-purchase {
+    max-width: none;        /* Ocupa todo el ancho disponible */
+    width: 100%;
+  }
+}

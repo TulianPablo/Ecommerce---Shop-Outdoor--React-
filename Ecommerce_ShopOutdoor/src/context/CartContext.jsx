@@ -24,7 +24,6 @@ const CartProvider=({children}) => {
         }
       }
 
-    //console.log(cart)
 
     const totalQuantity = () =>{
         const quantity = cart.reduce((total, productCart)=> total + productCart.quantity, 0)

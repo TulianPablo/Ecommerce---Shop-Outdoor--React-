@@ -3,8 +3,8 @@ import { cartContext } from "../../context/CartContext"
 import { Timestamp, collection, addDoc } from "firebase/firestore"
 import db from "../../db/db.js"
 import { Link } from "react-router-dom"
-//import validateForm from "../../utils/validateForm.js"
-//import { toast } from "react-toastify"
+import validateForm from "../../utils/validateForm.js"
+import { toast } from "react-toastify"
 import "./checkout.css"
 
 const Checkout = () => {
@@ -34,27 +34,27 @@ const Checkout = () => {
       total: totalAmount()
     }
 
-    uploadOrder(order)
-    
-    //antes de subir la orden, validamos los datos del formulario
-    //const response = await validateForm(dataForm)
-   // if(response.status === "success"){
-     // uploadOrder(order)
-   // }else{
-      //toast.error(response.message)
-    //}
-  }
+       //antes de subir la orden, validamos los datos del formulario
+    const response = await validateForm(dataForm)
+       if(response.status === "success"){
+         uploadOrder(order)
+       }else{
+         toast.error(response.message)
+       }
+     }
+
 
   const uploadOrder = (newOrder) => {
     const ordersRef = collection(db, "orders")
     addDoc(ordersRef, newOrder)
       .then((response) => {
-        setIdOrder(response.id)
+      setIdOrder(response.id)
       })
       .finally(() => {
-        //una vez generada la orden, vaciamos nuestro carrito
+          //una vez generada la orden, vaciamos nuestro carrito
         deleteCart()
-        //toast.success("orden generada correctamente!")
+        toast.success("orden generada exitosamente!")
+    
       })
   }
 
