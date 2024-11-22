@@ -32,7 +32,7 @@ const CartProvider=({children}) => {
     }
 
     const totalAmount = () => {
-        const amount= cart.reduce( (total, productCart)=> total + ( productCart.quantity * productCart.price.replace(/\./g, '') ), 0 )
+        const amount= cart.reduce( (total, productCart)=> total + ( productCart.quantity * productCart.price ), 0 )
 
         return amount
       }

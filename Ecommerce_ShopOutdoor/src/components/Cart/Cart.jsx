@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { cartContext } from '../../context/CartContext';
 import './cart.css';
 import { Link } from 'react-router-dom';
@@ -24,19 +24,22 @@ const Cart = () => {
           <img src={productCart.image} alt={productCart.name} />
           <div className="cart-item-info">
             <p>{productCart.name}</p>
-            <p>Precio c/u: ${productCart.price.replace(/\./g, '')}</p>
+            <p>Precio c/u: ${productCart.price}</p>
             <p>Cantidad: {productCart.quantity}</p>
-            <p className="price">Subtotal: ${productCart.quantity * productCart.price.replace(/\./g, '')}</p>
+            <p className="price">Subtotal: ${productCart.quantity * productCart.price}</p>
           </div>
           <button onClick={() => deleteProductById(productCart.id)}>
             Eliminar producto
           </button>
         </div>
       ))}
+      <div>
       <p className="total-price">Precio total: ${totalAmount()}</p>
       <button className="empty-cart-btn" onClick={deleteCart}>
         Vaciar Carrito
       </button>
+      <Link to="/checkout" className="button-finalize-purchase">Finalizar compra</Link>
+    </div>
     </div>
   );
 };

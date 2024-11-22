@@ -1,0 +1,101 @@
+/* Estilo principal del contenedor del checkout */
+.checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: rgb(110, 107, 77); /* Fondo principal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Formulario */
+  .form-checkout {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-checkout h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+  }
+  
+  /* Contenedor de los campos del formulario */
+  .content-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #555555;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: rgb(110, 107, 77); /* Color del borde activo */
+  }
+  
+  /* Botón de enviar orden */
+  .button-send-order {
+    background-color: rgb(110, 107, 77); /* Consistencia con otros botones */
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-send-order:hover {
+    background-color: rgb(85, 82, 60);
+  }
+  
+  /* Vista de confirmación */
+  .checkout > div {
+    text-align: center;
+  }
+  
+  .checkout h2 {
+    color: #2c3e50;
+  }
+  
+  .checkout p {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .button-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: rgb(85, 82, 60);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  

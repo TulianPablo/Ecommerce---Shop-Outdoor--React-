@@ -7,8 +7,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
   }
 
-  
-  
   .cart-item {
     display: flex;
     align-items: center;
@@ -66,24 +64,43 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-/* Botón para vaciar el carrito */
+/* Botón para Vaciar Carrito (mismo estilo que Finalizar Compra) */
 .empty-cart-btn {
-  display: block;            /* Ocupa toda la fila */
-  margin: 20px auto;         /* Centrado automático */
-  background-color: #e74c3c; /* Fondo rojo */
-  color: white;              /* Texto blanco */
-  font-size: 1.2rem;         /* Tamaño de texto */
-  font-weight: bold;         /* Negrita */
-  padding: 12px 20px;        /* Espaciado interno */
-  border: none;              /* Sin borde */
-  border-radius: 8px;        /* Bordes redondeados */
-  cursor: pointer;           /* Manito al pasar */
-  transition: background-color 0.3s ease; /* Transición suave */
+  display: inline-block;
+  background-color: #333; /* Color principal */
+  color: white; /* Texto blanco */
+  font-weight: bold;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center;
+  text-decoration: none; /* Quitar subrayado */
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Espacio superior */
+  display: block; /* Centrar botón */
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de mano */
 }
 
+/* Hover para Vaciar Carrito */
 .empty-cart-btn:hover {
-  background-color: #c0392b; /* Fondo más oscuro al pasar */
+  background-color: red; /* Color más oscuro */
+  transform: scale(1.05); /* Pequeña ampliación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 }
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .empty-cart-btn {
+    width: 100%; /* Botón ocupa todo el ancho */
+    max-width: none;
+  }
+}
+
 
 /* Contenedor para el carrito vacío */
 .empty-cart-container {
@@ -111,7 +128,7 @@
   font-size: 1.2rem;       /* Tamaño de fuente */
   font-weight: bold;       /* Texto en negrita */
   color: white;            /* Texto blanco */
-  background-color: #2c3e50; /* Fondo oscuro */
+  background-color: #333; /* Fondo oscuro */
   padding: 10px 20px;      /* Espaciado interno */
   border-radius: 8px;      /* Bordes redondeados */
   text-decoration: none;   /* Sin subrayado */
@@ -120,6 +137,41 @@
 
 /* Hover del link */
 .empty-cart-link:hover {
-  background-color: #34495e; /* Fondo más claro */
+  background-color: #333; /* Fondo más claro */
   transform: scale(1.05);   /* Aumenta ligeramente el tamaño */
+}
+
+/* Botón de Finalizar Compra */
+.button-finalize-purchase {
+  display: inline-block;
+  background-color: #333; /* Color principal */
+  color: white; /* Texto blanco */
+  font-weight: bold;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center;
+  text-decoration: none; /* Quitar subrayado */
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Espacio superior */
+  display: block; /* Centrar botón */
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Efecto hover */
+.button-finalize-purchase:hover {
+  background-color: rgb(85, 82, 60); /* Color más oscuro */
+  transform: scale(1.05); /* Pequeña ampliación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .button-finalize-purchase {
+    width: 100%; /* Botón ocupa todo el ancho */
+    max-width: none;
+  }
 }
